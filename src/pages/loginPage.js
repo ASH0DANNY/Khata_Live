@@ -30,11 +30,11 @@ const LoginPage = () => {
 
           if (check.success === true) {
             setIsLoggedIn(true);
-            navigate("/home");
             console.log(
               `Logging in with username: ${email} and password: ${password}`
             );
           }
+          navigate("/home");
         }
       } catch (error) {
         console.error("Error while login", error);
