@@ -4,7 +4,7 @@ import React from 'react';
 import { Button } from '@mui/material';
 
 
-const LogoutPage = () => {
+const LogoutBtn = () => {
 
   const handleLogout = () => {
     // Perform logout logic (e.g., clear local storage, API call)
@@ -21,4 +21,4 @@ const LogoutPage = () => {
   );
 };
 
-export default LogoutPage;
+export default LogoutBtn;
