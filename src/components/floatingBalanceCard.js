@@ -52,17 +52,19 @@ const FloatingCard = () => {
   const UpdateBalance = async (event) => {
     event.preventDefault();
     try {
-      const response = await fetch(
-        "http://localhost:4000/api/khata/mybalance",
-        {
-          method: "PUT", // Use PUT for updating data
-          headers: { "Content-Type": "application/json" }, // Specify content type
-          body: JSON.stringify({
-            newBalance: newBalance,
-            transType: Transtype,
-          }), // Send the updated balance in the request body
-        }
-      );
+      // const response = await fetch(
+      //   "http://localhost:4000/api/khata/mybalance",
+      //   {
+      //     method: "PUT", // Use PUT for updating data
+      //     headers: { "Content-Type": "application/json" }, // Specify content type
+      //     body: JSON.stringify({
+      //       newBalance: newBalance,
+      //       transType: Transtype,
+      //     }), // Send the updated balance in the request body
+      //   }
+      // );
+
+      const response = true;
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
