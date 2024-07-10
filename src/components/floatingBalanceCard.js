@@ -68,9 +68,10 @@ const FloatingCard = () => {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
 
-      const fetchUpdatedBalance = await fetch(
-        "http://localhost:4000/api/khata/mybalance"
-      );
+      // const fetchUpdatedBalance = await fetch(
+      //   "http://localhost:4000/api/khata/mybalance"
+      // );
+      const fetchUpdatedBalance = mybalance;
       if (!fetchUpdatedBalance.ok) {
         throw new Error(`HTTP error! status: ${fetchUpdatedBalance.status}`);
       }
