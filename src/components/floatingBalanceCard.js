@@ -27,26 +27,26 @@ const FloatingCard = () => {
   const [Transtype, setTranstype] = useState("");
 
   //--Fetch My Balance--
-  useEffect(() => {
-    const fetchbalance = async () => {
-      const getBalance = await fetch(
-        "http://localhost:4000/api/khata/mybalance"
-      );
+  // useEffect(() => {
+  //   const fetchbalance = async () => {
+  //     const getBalance = await fetch(
+  //       "http://localhost:4000/api/khata/mybalance"
+  //     );
 
-      await getBalance
-        .json()
-        .then((response) => {
-          const response2 = response.balance;
-          const mydata2 = response2[0].my_balance;
-          setMybalance(mydata2);
-        })
-        .catch((error) => {
-          console.log("Fetch balance error:" + error);
-        });
-    };
+  //     await getBalance
+  //       .json()
+  //       .then((response) => {
+  //         const response2 = response.balance;
+  //         const mydata2 = response2[0].my_balance;
+  //         setMybalance(mydata2);
+  //       })
+  //       .catch((error) => {
+  //         console.log("Fetch balance error:" + error);
+  //       });
+  //   };
 
-    fetchbalance();
-  }, [mybalance]);
+  //   fetchbalance();
+  // }, [mybalance]);
 
   //Updating MyBalance
   const UpdateBalance = async (event) => {
